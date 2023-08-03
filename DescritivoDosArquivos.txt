@@ -1,0 +1,34 @@
+Arquivos componentes do ANAREDE
+
+
+DBAR Dados de barras
+DLIN Dados de linhas
+DCSC Leitura dos dados de CSC (de para)
+DCNV conversor CA-CC
+DELO Dados de ELO
+DTPF o controle de tensão por variação automática de tap (CTAP).
+DCTR dados complementares de transformadores (de para)
+DCER Leitura dos dados de compensador estático de reativos.
+
+
+--------------------------------------------------------DBAR------------------------------------
+Num: Número - Número de identificação da barra CA.
+Op: Operação - A ou 0 - adição de dados de barra. E ou 1 - eliminação de dados de barra. M ou 2 - modificação de dados de barra. Default (A)
+estado: Estado - L se a barra estiver em operação (ligado).;D se a barra circuito estiver fora de operação (desligado). Default (L)
+tipo: Tipo - barra de carga PQ .; PV barra de tensão regulada; 2 barra de referência; 3 PQ - Injeções de potências ativa e reativa fixas enquanto a magnitude de tensão permanecer entre os valores limite. Default (0) 
+DGBT: Grupo Base de tensão - Identificador de Grupo Base de Tensão ao qual pertence a barra CA, 0 composto por até dois caracteres do tipo dígito (0 a 9) ou caracter (A a Z), conforme definido no Código de Execução DGBT. Default 0
+nome: Identificacao alfanumérica da barra -
+DGLT: Identificador de Grupo de Limite de Tensão ao qual pertence a barra 0 CA, composto por até dois caracteres do tipo dígito (0 a 9) ou caracter (A a Z), conforme definido no Código de Execução DGLT.  Default (0) 
+V:  Valor inicial da magnitude da tensão, em p.u (quatro caracteres sem separador decimal 1000=1.000 pu 999=0.999) 
+teta: Ângulo de fase inicial da tensão da barra, em graus.
+GeracaoAtiva: Valor de geração de potência ativa na barra, em MW. default 0
+GeracaoReativa: Valor de geração de potência reativa na barra, em Mvar. default 0
+GeracaoReativaMin: Valor do limite mínimo de geração de potência reativa na barra, em Mvar. default .
+GeracaoReativaMax: Valor do limite máximo de geração de potência reativa na barra, em Mvar. default .
+BarraContro: Para barras de tensão regulada e de referência, com limites de potência reativa especificados, este campo destina-se ao número da barra cuja magnitude da tensão será controlada. default A prórpria barra 
+CargaAtiva: Valor da carga ativa da barra, em MW.
+CargaReativa: Valor da carga reativa da barra, em Mvar.
+Capacitor/reator: Valor total da potência reativa injetada na barra, em Mvar, por bancos de capacitores/reatores
+Area: Número da área à qual pertence a barra. defaul 1
+Vf: Tensão Para Definição de Carga defaut 1pu
+M: Entre neste campo com o modo de visualização da barra CA no diagrama unifilar:0 - barra normal.; 1 - barra midpoint.; 2 - barra auxiliar. Default 0
