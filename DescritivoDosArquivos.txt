@@ -32,3 +32,6 @@ Capacitor/reator: Valor total da potência reativa injetada na barra, em Mvar, p
 Area: Número da área à qual pertence a barra. defaul 1
 Vf: Tensão Para Definição de Carga defaut 1pu
 M: Entre neste campo com o modo de visualização da barra CA no diagrama unifilar:0 - barra normal.; 1 - barra midpoint.; 2 - barra auxiliar. Default 0
+
+
+--------------------------------------------------------DLIN------------------------------------

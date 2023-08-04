@@ -137,3 +137,89 @@ dfDBAR=pd.DataFrame(data=dDBAR)
 dfDBAR.to_csv("DBAR.csv",index=None)
 # %%
 
+lstde=[]
+lstde_ligado=[]
+lstop=[]
+lstpara_ligado=[]
+lstpara=[]
+lstcircuito=[]
+lstestado=[]
+lstproprietario=[]
+lstresistencia=[]
+lstreatancia=[]
+lstsuceptancia=[]
+lsttap=[]
+lsttap_min=[]
+lsttap_max=[]
+lstdefasagem=[]
+lstbarracontrolad=[]
+lstcapacidadenominal=[]
+lstcapacidadeememergencia=[]
+lstnumerodetaps=[]
+lstcapacidadedeequipamento=[]
+
+
+
+
+
+
+for line in DLINlines[2:-1]:
+    de=line[0:5] # caracteres 1-05 do DLIN
+    de_ligado=line[5] # caractere 6 do DLIN
+    op= line[7] # caractere 8
+    para_ligado=line[9] # caractere 10
+    para=line[10:15] # caractere 11-15
+    circuito=line[15:17] # caractere 16-17
+    estado=line[17] # caractere 18
+    proprietario=line[18] # caractere 19
+    resistencia=line[20:26] # caractere 21-26
+    reatancia=line[26:32] #caractere 27-32
+    suceptancia=line[32:38] # caractere 33-38
+    tap=line[38:43] # caractere 39-43
+    tap_min=line[43:48] # caractere 44-48
+    tap_max=line[48:53] # caractee 49-53
+    defasagem=line[53:58] # caractere 54-58
+    barracontrolad=line[58:64] # caractere 59-64
+    capacidadenominal=line[64:68] # caracere 65-68
+    capacidadeememergencia=line[68:72] # caractere 69-72
+    numerodetaps=line[72:74] # caractere 73-74 
+    capacidadedeequipamento=line[74:78] # caractere 75-78
+
+    lstde.append(de)
+    lstde_ligado.append(de_ligado)
+    lstop.append(op)
+    lstpara_ligado.append(para_ligado)
+    lstpara.append(para)
+    lstcircuito.append(circuito)
+    lstestado.append(estado)
+    lstproprietario.append(proprietario)
+    lstresistencia.append(resistencia)
+    lstreatancia.append(reatancia)
+    lstsuceptancia.append(suceptancia)
+    lsttap.append(tap)
+    lsttap_min.append(tap_min)
+    lsttap_max.append(tap_max)
+    lstdefasagem.append(defasagem)
+    lstbarracontrolad.append(barracontrolad)
+    lstcapacidadenominal.append(capacidadenominal)
+    lstcapacidadeememergencia.append(capacidadeememergencia)
+    lstnumerodetaps.append(numerodetaps)
+    lstcapacidadedeequipamento.append(capacidadedeequipamento)
+
+
+#%%
+
+dDLIN={"de":lstde,"ligado_de":lstde_ligado,"op":lstop,\
+      "ligado_para":lstpara_ligado,"para":lstpara,"circuito":lstcircuito,"estado":lstestado,"prop":lstproprietario,\
+        "r":lstresistencia,"x":lstreatancia,"bsh":lstsuceptancia,\
+        "tap":lsttap,"tapmin":lsttap_min,"tapmax":lsttap_max,"defasagem":lstdefasagem,\
+        "barracontrolada":lstbarracontrolad,"Capacidadenom":lstcapacidadenominal,"CapacidadeEmergencia":lstcapacidadeememergencia\
+        ,"NumeroTaps":lstnumerodetaps,"CapacidadeEquipa":lstcapacidadedeequipamento}
+# %%
+
+
+#%%
+dfDLIN=pd.DataFrame(data=dDLIN)
+#%%
+dfDLIN.to_csv("DLIN.csv",index=None)
+#%%
