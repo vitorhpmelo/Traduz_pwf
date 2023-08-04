@@ -365,7 +365,7 @@ def criaDCTR(lines):
 
 
 
-
+#le arquivo
 fname="arquivo.PWF"
 
 with open(fname,'r') as f:
